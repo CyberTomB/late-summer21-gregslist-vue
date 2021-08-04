@@ -6,7 +6,7 @@
         <div class="p-3">
           <h2>{{car.make}} - {{car.model}} - {{car.year}}</h2>
         <p>{{car.description}}</p>
-        <h3><em>{{carPrice}}</em></h3>
+        <h3><em>{{car.price}}</em></h3>
         </div>
       </div>
     </div>
@@ -33,7 +33,6 @@ export default {
     })
     return {
       car: computed(()=> AppState.activeCar),
-      carPrice: computed(()=> AppState.activeCar.price.toLocaleString("en-US", {style: 'currency', currency: 'USD'})),
       async destroy(){
         try {
           await carsService.destroy(route.params.id)

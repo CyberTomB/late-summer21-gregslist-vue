@@ -1,6 +1,6 @@
 <template>
   <div class="car-form">
-    <form class="d-flex" @submit.prevent="createCar">
+    <form class="d-flex justify-content-center" @submit.prevent="createCar">
       <div class="form-group">
         <label for="make">Make</label>
         <input
@@ -93,7 +93,6 @@ export default {
         try {
           const newId = await carsService.createCar(state.newCar)
           // NOTE clears the form
-          debugger
           state.newCar = {}
           router.push({name: 'CarDetails', params: {id: newId}})
         } catch (error) {

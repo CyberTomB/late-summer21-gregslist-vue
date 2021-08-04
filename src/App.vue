@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-      <router-link :to="{name: 'Cars'}" class="navbar-brand">Gregslist</router-link>
+      <router-link :to="{name: 'Home'}" class="navbar-brand">Gregslist</router-link>
       <button
         class="navbar-toggler d-lg-none"
         type="button"
@@ -17,11 +17,12 @@
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
             <router-link class="nav-link" :to="{name: 'Cars'}"
-              >Cars <span class="sr-only">(current)</span></router-link
+              >Cars</router-link
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Jobs</a>
+            <router-link class="nav-link" :to="{name: 'Jobs'}"
+              >Jobs</router-link>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Houses</a>
