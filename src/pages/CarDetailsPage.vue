@@ -1,11 +1,13 @@
 <template>
   <div class="container-fluid car-details-page">
-    <div class="row justify-content-start align-items-center" style="height: 100%">
-      <div class="col-md-12 text-center">
-        <img :src="car.imgUrl" class="img-fluid float-left" :alt="car.make + car.model + 'image'">
-        <h2>{{car.make}} - {{car.model}} - {{car.year}}</h2>
+    <div class="row text-center">
+      <div class="col-md-12">
+        <img :src="car.imgUrl" class="img-fluid car-img" :alt="car.make + car.model + 'image'">
+        <div class="p-3">
+          <h2>{{car.make}} - {{car.model}} - {{car.year}}</h2>
         <p>{{car.description}}</p>
-        <h3><em>{{car.price.toLocaleString("en-US", {style: 'currency', currency: 'USD'})}}</em></h3>
+        <h3><em>{{carPrice}}</em></h3>
+        </div>
       </div>
     </div>
   </div>
@@ -31,6 +33,7 @@ export default {
     })
     return {
       car: computed(()=> AppState.activeCar),
+      carPrice: computed(()=> AppState.activeCar.price.toLocaleString("en-US", {style: 'currency', currency: 'USD'})),
       async destroy(){
         try {
           await carsService.destroy(route.params.id)
@@ -46,5 +49,7 @@ export default {
 
 
 <style lang="scss" scoped>
-
+.car-img{
+  max-height: 45vh;
+}
 </style>

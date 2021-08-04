@@ -5,7 +5,7 @@
           <img :src="car.imgUrl" class="w-100" :alt="car.make">
           <div class="p-3">
               <div class="text-center">
-                  <p><b>{{car.year}} - {{car.make}}</b></p>
+                  <p><b>{{car.year}} - {{car.make}} - {{car.model}}</b></p>
               </div>
           </div>
         </router-link>

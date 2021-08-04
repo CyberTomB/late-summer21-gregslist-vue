@@ -42,6 +42,8 @@
   </footer>
 </template>
 
+
+
 <style lang="scss">
 #app {
   min-height: 100vh;
@@ -50,8 +52,28 @@
 }
 main {
   flex-grow: 1;
+  align-items: center;
+  display: flex;
 }
 .logo {
   height: 1rem;
 }
+
+//NOTE Style Debugger:
+// body .container,
+// body .container-fluid {
+//     outline: 2px double blue;
+//     outline-offset: -2px;
+// }
+
+// body .row {
+//     outline: 2px dashed red;
+//     outline-offset: -2px;
+// }
+
+// body [class*="col-"] {
+//     outline: 2px dotted forestgreen;
+//     outline-offset: -3px;
+// }
+
 </style>
