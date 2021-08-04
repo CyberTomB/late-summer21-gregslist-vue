@@ -1,5 +1,5 @@
 <template>
-  <div class="home container-fluid">
+  <div class="cars container-fluid">
     <div class="row">
       <div class="col">
         <CarForm />
@@ -22,7 +22,7 @@ import CarCard from '../components/CarCard.vue'
 import CarForm from '../components/CarForm.vue'
 
 export default {
-  name: 'Home',
+  name: 'Cars',
   setup(){
     // state
 

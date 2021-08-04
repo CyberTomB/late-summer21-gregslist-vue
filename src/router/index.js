@@ -1,13 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import CarDetailsPage from '../pages/CarDetailsPage.vue'
-import Home from '../pages/Home.vue'
+import Cars from '../pages/Cars.vue'
 
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Cars',
+    component: Cars
   },{
     // required param ':id'
     path: '/car-details/:id',
