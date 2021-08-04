@@ -1,11 +1,13 @@
 <template>
-  <div class="car-details-page">
-    <h1>Welcome to the car details</h1>
-    {{car.make}} - {{car.model}}
-    <br>
-    {{car.description}}
-
-    <button class="btn btn-danger" @click="destroy">Delete</button>
+  <div class="container-fluid car-details-page">
+    <div class="row justify-content-start align-items-center" style="height: 100%">
+      <div class="col-md-12 text-center">
+        <img :src="car.imgUrl" class="img-fluid float-left" :alt="car.make + car.model + 'image'">
+        <h2>{{car.make}} - {{car.model}} - {{car.year}}</h2>
+        <p>{{car.description}}</p>
+        <h3><em>{{car.price.toLocaleString("en-US", {style: 'currency', currency: 'USD'})}}</em></h3>
+      </div>
+    </div>
   </div>
 </template>
 
